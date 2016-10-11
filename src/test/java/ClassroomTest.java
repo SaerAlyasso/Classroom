@@ -27,26 +27,27 @@ public class ClassroomTest {
 		room.setClassroomTerm("Spring17");
 		assertEquals(room.getClassroomTerm(),"Spring17");
 	}
-	/*
+	
 	@Test
 	public void testGetStudents() {
 		
 		Classroom room = new Classroom();
 		room.setStudents(studentList);
-		assertTrue(room.getStudents()==studentList);
+		assertEquals(room.getStudents(),studentList);
 		//Student student2 = new Student("Malle", "Kalle",25,'f');
 		//room.setStudents(studentList);
 		//room.addANewStudent(student2);
 		
 	}
 	
+	
 	@Test
 	public void testAddStudents() {
-		
+		//ArrayList<Student> studentList2 = new ArrayList<Student>();
 		Classroom room = new Classroom();
 		Student student2 = new Student("Malle", "Kalle",25,'f');
 		room.addANewStudent(student2);
-		
+		assertEquals(room.getStudents().get(0).getFirstName(),"Malle");
 	}
 	
 	@Test
@@ -55,7 +56,7 @@ public class ClassroomTest {
 		Classroom room = new Classroom();
 		Student student2 = new Student("Malle", "Kalle",25,'f');
 		room.addANewStudent(student2);
-		//assertTrue(room.removeAStudent("Malle"));
+		//assertNotNull(room.removeAStudent("Malle"));
 		
 		//assertEquals("Malle",student2.getFirstName());
 		room.removeAStudent("Malle");
@@ -63,6 +64,7 @@ public class ClassroomTest {
 		room.removeAStudent("Mapple");
 	}
 
+	/*
 	@Test
 	public void testPrintFullRelatory() {
 		
