@@ -87,12 +87,14 @@ public class StudentTest {
 	
 	public void testToString(){
 		
-		String name = student.toString();
+		Student student9 = new Student("Kalle", "Borgen",25,'m',5.0,5.0,5.0);
+		String name = student9.toString();
 		assertTrue(name.contains("Student: "));
 		
 		
-		//student.setAverageGrade(3.0);
-		//String name2=student.toString();
-		//assertTrue(name2.contains("Student: "));
+		Student student10 = new Student("Olle", "ziczac",25,'m',7.0,7.0,7.0);
+		String name2 = student10.toString();
+		assertTrue(name2.contains("Student: "));
+		
 	}
 }
