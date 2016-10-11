@@ -10,12 +10,7 @@ public class StudentTest {
 	Student student2 = new Student("Malle", "Kalle",25,'f');
 	Student student3 = new Student();
 	
-	/*@Test
-	public void testStudentCreation(){
-	Student student = new Student("Anders", "Borg",55,'m',5.0,5.0,5.0);
-	Student student2 = new Student("Malle", "Kalle",25,'f');
 	
-	}*/
 	
 	@Test
 	public void testGetFirstGrade(){
