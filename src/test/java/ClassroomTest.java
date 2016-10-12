@@ -56,14 +56,30 @@ public class ClassroomTest {
 	@Test
 	public void testRemoveAStudent() {
 		
+		PrintStream originalOut = System.out;
+		
+		OutputStream os = new ByteArrayOutputStream();
+		PrintStream ps = new PrintStream(os);
+		System.setOut(ps);
+		
 		Classroom room = new Classroom();
 		Student student2 = new Student("Malle", "Kalle",25,'f');
+		Student student3 = new Student("Nalle", "Talle",45,'m');
 		room.addANewStudent(student2);
+		room.addANewStudent(student3);
 		
-		assertEquals(room.getStudents().get(0).getFirstName(),"Malle");
+		room.removeAStudent("Malle");
+		assertTrue(os.toString().contains("removed!"));
+		
+		room.removeAStudent("Malle");
+		assertTrue(os.toString().contains("exist!"));
+		
+		System.setOut(originalOut);
+		
+		/*assertEquals(room.getStudents().get(0).getFirstName(),"Malle");
 		room.removeAStudent("Malle");
 		assertFalse(room.getStudents().contains(student2));
-		room.removeAStudent("Malle");
+		room.removeAStudent("Malle");*/
 	}
 
 	
